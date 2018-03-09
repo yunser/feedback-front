@@ -97,6 +97,7 @@
 
         <div>
             <div>当然，你也可以联系 QQ 1418503647 或 邮箱 1418503647@qq.com 进行反馈。</div>
+            <div v-if="app">你也可以查看其它用户的 <a class="view" href="#" @click.prevent="viewFeedback">反馈</a></div>
         </div>
     </my-page>
 </template>
@@ -168,6 +169,9 @@
                     response => {
                         console.log(response)
                     })
+            },
+            viewFeedback() {
+                this.$router.push(`/apps/${this.app.id}/feedbacks`)
             }
         }
     }
