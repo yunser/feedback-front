@@ -141,7 +141,6 @@
                         response => {
                             console.log(response)
                         })
-
                 }
             },
             debug() {
