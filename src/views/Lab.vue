@@ -1,17 +1,7 @@
 <template>
-    <my-page :title="pageTitle">
-        <div class="form-item">
-            <ui-text-field class="input" v-model="title" hintText="（选填）请用一句话描述您的问题" />
-        </div>
-        <div class="form-item">
-            <ui-text-field class="input" v-model="content" hintText="在（）的情况下，（）网站出现了（）的异常" multiLine :rows="4"/>
-        </div>
-        <div class="form-item">
-            <ui-text-field class="input" v-model="contact" hintText="（选填）如果您希望得到反馈，请留下您的联系方式" multiLine :rows="4"/>
-        </div>
-
-        <div class="rating-box">
-            <h2 class="title">给网站一个评价吧~</h2>
+    <my-page title="关于">
+        <div class="demo-container">
+            <h1>How was the help you received?</h1>
             <div class="rating-control">
                 <div class="rating-option" rating="1" selected-fill="#FFA98D">
                     <div class="icon">
@@ -22,7 +12,7 @@
                             <path d="M18.8284271,21.8284271 C20.1906345,20.4662198 20.3649459,18.3659485 19.3513614,16.8148522 C18.8284273,16.7269287 18.7357788,16.6984863 18.2147827,16.6140137 C17.6937866,16.529541 16.3325806,16.3378906 15.4175415,16.1715729 C14.5025024,16.0052551 14.2854614,15.9660737 13.5035752,15.8741891 C13.3888159,15.9660737 13.2779442,16.0652016 13.1715729,16.1715729 C12.2247147,17.118431 11.8517904,18.4218859 12.0527998,19.6496386 C12.1834095,20.4473941 12.5563339,21.2131881 13.1715729,21.8284271 C14.73367,23.3905243 17.26633,23.3905243 18.8284271,21.8284271 Z" class="left-eye" fill="#FFFFFF"></path>
                         </svg>
                     </div>
-                    <div class="label">烂透了</div>
+                    <div class="label">Terrible</div>
                     <div class="touch-marker"></div>
                 </div>
                 <div class="rating-option" rating="2" selected-fill="#FFC385">
@@ -34,7 +24,7 @@
                             <path d="M18.8284271,21.8284271 C20.1906345,20.4662198 20.3649459,18.3659485 19.3513614,16.8148522 C19.2026284,16.5872449 19.0283169,16.3714627 18.8284271,16.1715729 C17.9983168,15.3414625 16.8941253,14.9524791 15.8071502,15.0046227 C15.1722413,15.7858887 15.1074218,15.8599243 14.5217284,16.593811 C13.9360351,17.3276978 13.9088746,17.3549194 13.4539185,17.9093628 C12.9989624,18.4638062 12.772644,18.7149658 12.0527998,19.6496386 C12.1834095,20.4473941 12.5563339,21.2131881 13.1715729,21.8284271 C14.73367,23.3905243 17.26633,23.3905243 18.8284271,21.8284271 Z" class="left-eye" fill="#FFFFFF"></path>
                         </svg>
                     </div>
-                    <div class="label">不好</div>
+                    <div class="label">Bad</div>
                     <div class="touch-marker"></div>
                 </div>
                 <div class="rating-option" rating="3">
@@ -46,7 +36,7 @@
                             <path d="M18.8284271,21.8284271 C20.1906345,20.4662198 20.3649459,18.3659485 19.3513614,16.8148522 C19.2026284,16.5872449 19.0283169,16.3714627 18.8284271,16.1715729 C17.9983168,15.3414625 16.8941253,14.9524791 15.8071502,15.0046227 C14.9879477,15.0439209 14.1785241,15.3337764 13.5035752,15.8741891 C13.3888159,15.9660737 13.2779442,16.0652016 13.1715729,16.1715729 C12.2247147,17.118431 11.8517904,18.4218859 12.0527998,19.6496386 C12.1834095,20.4473941 12.5563339,21.2131881 13.1715729,21.8284271 C14.73367,23.3905243 17.26633,23.3905243 18.8284271,21.8284271 Z" class="left-eye" fill="#FFFFFF"></path>
                         </svg>
                     </div>
-                    <div class="label">还好啦</div>
+                    <div class="label">Okay</div>
                     <div class="touch-marker"></div>
                 </div>
                 <div class="rating-option" rating="4">
@@ -58,7 +48,7 @@
                             <path d="M18.8284271,21.8284271 C20.1906345,20.4662198 20.3649459,18.3659485 19.3513614,16.8148522 C19.2026284,16.5872449 19.0283169,16.3714627 18.8284271,16.1715729 C17.9983168,15.3414625 16.8941253,14.9524791 15.8071502,15.0046227 C14.9879477,15.0439209 14.1785241,15.3337764 13.5035752,15.8741891 C13.3888159,15.9660737 13.2779442,16.0652016 13.1715729,16.1715729 C12.2247147,17.118431 11.8517904,18.4218859 12.0527998,19.6496386 C12.1834095,20.4473941 12.5563339,21.2131881 13.1715729,21.8284271 C14.73367,23.3905243 17.26633,23.3905243 18.8284271,21.8284271 Z" class="left-eye" fill="#FFFFFF"></path>
                         </svg>
                     </div>
-                    <div class="label">不错</div>
+                    <div class="label">Good</div>
                     <div class="touch-marker"></div>
                 </div>
                 <div class="rating-option" rating="5">
@@ -70,7 +60,7 @@
                             <path d="M18.8284271,21.8284271 C20.1906345,20.4662198 20.3649459,18.3659485 19.3513614,16.8148522 C19.2026284,16.5872449 19.0283169,16.3714627 18.8284271,16.1715729 C17.9983168,15.3414625 16.8941253,14.9524791 15.8071502,15.0046227 C14.9879477,15.0439209 14.1785241,15.3337764 13.5035752,15.8741891 C13.3888159,15.9660737 13.2779442,16.0652016 13.1715729,16.1715729 C12.2247147,17.118431 11.8517904,18.4218859 12.0527998,19.6496386 C12.1834095,20.4473941 12.5563339,21.2131881 13.1715729,21.8284271 C14.73367,23.3905243 17.26633,23.3905243 18.8284271,21.8284271 Z" class="left-eye" fill="#FFFFFF"></path>
                         </svg>
                     </div>
-                    <div class="label">非常棒</div>
+                    <div class="label">Great</div>
                     <div class="touch-marker"></div>
                 </div>
                 <div class="current-rating">
@@ -78,25 +68,7 @@
                     <div class="touch-marker"></div>
                 </div>
             </div>
-        </div>
-
-        <!--<button>添加图片</button>-->
-        <!--<input type="checkbox"> 上传问题日志-->
-        <div class="btns">
-            <ui-raised-button label="提交" primary @click="submit" />
-        </div>
-
-        <div class="success-box" v-if="success">
-            <h2>反馈成功</h2>
-            <div>
-                感谢您的反馈，您的支持是我们最大的动力！
-                <span v-if="contact">您的意见意见成功反馈给客服，我们会尽快跟您联系</span>
-
-            </div>
-        </div>
-
-        <div>
-            <div>当然，你也可以联系 QQ 1418503647 或 邮箱 1418503647@qq.com 进行反馈。</div>
+            <button @click="test">获取</button>
         </div>
     </my-page>
 </template>
@@ -107,91 +79,19 @@
     export default {
         data () {
             return {
-                pageTitle: '反馈',
-                title: '',
-                content: '',
-                contact: '',
-                success: false,
-                app: null
             }
         },
         mounted() {
-            this.init()
-//            this.debug()
+            document.querySelector('.ad').classList.add('clip-marker')
+            this.rating = new RatingControl(document.querySelector('.rating-control'))
         },
         methods: {
-            init() {
-                let name = this.$route.query.name
-                if (name) {
-                    this.pageTitle = name + '反馈'
-                }
-
-                document.querySelector('.rating-box').classList.add('clip-marker')
-                this.rating = new RatingControl(document.querySelector('.rating-control'))
-
-                let appId = this.$route.params.id
-                if (appId) {
-                    this.$http.get('/apps/' + appId)
-                        .then(response => {
-                            let data = response.data
-                            console.log(data)
-                            this.app = data
-                            this.pageTitle = this.app.name + ' - 反馈'
-                        },
-                        response => {
-                            console.log(response)
-                        })
-
-                }
-            },
-            debug() {
-                this.content = '这是内容'
-                this.title = '这是标题'
-                this.submit()
-            },
-            submit() {
+            test() {
                 console.log(this.rating.selectedRating)
-                if (!this.content) {
-                    alert('请输入内容')
-                    return
-                }
-                this.$http.post('/feedbacks', {
-                    title: this.title || '',
-                    content: this.content || '',
-                    contact: this.contact,
-                    appId: this.app ? this.app.id : ''
-                }).then(
-                    response => {
-                        let data = response.data
-                        console.log(data.data)
-                        this.success = true
-                    },
-                    response => {
-                        console.log(response)
-                    })
             }
         }
     }
 </script>
 
-<style lang="scss" scoped>
-    .input {
-        width: 100%;
-        max-width: 400px;
-    }
-    .rating-box {
-        .title {
-            margin-bottom: 16px;
-            color: #999;
-        }
-    }
-    .btns {
-        margin-top: 16px;
-        margin-bottom: 24px;
-    }
-    .success-box {
-        padding: 16px;
-        background-color: #fff;
-        box-shadow: 0 1px 6px rgba(0,0,0,.117647), 0 1px 4px rgba(0,0,0,.117647);
-    }
+<style scoped>
 </style>
