@@ -1,6 +1,6 @@
 <template>
     <my-page title="关于">
-        <div class="demo-container">
+        <div class="common-container demo-container">
             <h1>How was the help you received?</h1>
             <div class="rating-control">
                 <div class="rating-option" rating="1" selected-fill="#FFA98D">
